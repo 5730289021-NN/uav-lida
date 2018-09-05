@@ -30,6 +30,8 @@ app.get('/info', (req,res) => {
     console.log(req.query);
 });
 
-app.get()
+app.get('/', (req,res) => {
+    res.send('index');
+});
 
 http.createServer(app).listen(80);
