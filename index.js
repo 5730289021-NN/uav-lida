@@ -5,9 +5,12 @@ const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 const bodyParser = require('body-parser');
 const http = require('http');
+const favicon = require('serve-favicon');
+
 const app = express();
 
 app.use(bodyParser.urlencoded({extended: true}))
+app.use(favicon(__dirname + '/public/images/favicon.ico'));
 
 // Connection URL
 const url = 'mongodb://lida:1idakick@ds020208.mlab.com:20208/uav-lida';
