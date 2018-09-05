@@ -37,4 +37,4 @@ app.get('/', (req,res) => {
     res.send('index');
 });
 
-http.createServer(app).listen(80);
+http.createServer(app).listen(process.env.PORT || 3000);
